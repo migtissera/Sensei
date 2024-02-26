@@ -11,6 +11,6 @@ A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 
 # Optional
 
-- Change the topics in topics.py
-- Change the system contexts in system_messages.py
-- Change the number of workers in params.py
+- Change the topics in `topics.py`
+- Change the system contexts in `system_messages.py`
+- Change the number of workers in `params.py`
