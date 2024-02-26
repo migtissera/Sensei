@@ -1,4 +1,4 @@
-# synthetic-data
+# Sensei
 A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 
 # How to run
