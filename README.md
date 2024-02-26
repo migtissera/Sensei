@@ -1,6 +1,8 @@
 # Sensei (先生)
 A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 
+![alt text](Sensei.png)
+
 # How to run
 
 - `pip install openai numpy`
