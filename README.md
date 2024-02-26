@@ -4,8 +4,8 @@ A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 # How to run
 
 - `pip install openai numpy`
-- Change GPT_MODEL, OPENAI_API_KEY and OUTPUT_FILE_PATH under params.py
-- `python main.py`
+- Change `GPT_MODEL`, `OPENAI_API_KEY` and `OUTPUT_FILE_PATH` under params.py
+- Run with `python main.py`
 
 # Optional
 
