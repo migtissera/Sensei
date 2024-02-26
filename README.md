@@ -1,4 +1,4 @@
-# Sensei
+# Sensei (先生)
 A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 
 # How to run
