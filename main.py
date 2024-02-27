@@ -2,8 +2,8 @@ import json
 import numpy as np
 
 from concurrent.futures import ThreadPoolExecutor
-from llm_handler import send_to_chatgpt
-from params import OUTPUT_FILE_PATH, NUM_WORKERS
+from llm_handler import send_to_llm
+from params import OUTPUT_FILE_PATH, NUM_WORKERS, PROVIDER
 
 from system_messages import (
     SYSTEM_MESSAGES_ORCA,
@@ -47,11 +47,10 @@ def generate_data(
         msg_prompt = {"role": "user", "content": user_prompts[pp]}
         msg_list.append(msg_prompt)
 
-        chatgpt_response, gpt_usage = send_to_chatgpt(msg_list)
-        gpt_generated_prompt = chatgpt_response["content"]
+        llm_response, llm_usage = send_to_llm(PROVIDER, msg_list)
 
-        user_prompts.append(str(gpt_generated_prompt))
-        gpt_outputs.append(gpt_generated_prompt)
+        user_prompts.append(llm_response)
+        gpt_outputs.append(llm_response)
 
     data = {
         "system": system_contexts[1],
@@ -62,7 +61,7 @@ def generate_data(
     with open(OUTPUT_FILE_PATH, "a") as output_file:
         output_file.write(json.dumps(data) + "\n")
 
-    return data, gpt_usage
+    return data, llm_usage
 
 
 def main():
@@ -94,7 +93,7 @@ def main():
                 nn += 1
                 print(data)
                 print(
-                    f"GPT Generation {nn} Complete, Token usage: {gpt_usage}, Failed: {failed}"
+                    f"Generation {nn} Complete, Token usage: {gpt_usage}, Failed: {failed}"
                 )
             else:
                 failed += 1
