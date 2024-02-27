@@ -8,6 +8,8 @@ A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 - `pip install openai mistralai numpy`
 
 ## Choose your provider: OpenAI or MistralAI
+- Change `PROVIDER` under `params.py`
+- `mistral` or `openai`
 
 ### For OpenAI
 - Change `GPT_MODEL`, `OPENAI_API_KEY` and `OUTPUT_FILE_PATH` under `params.py`
