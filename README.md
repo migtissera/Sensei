@@ -17,6 +17,7 @@ A simple, powerful, minimal codebase to generate synthetic data using OpenAI
 ### For MistralAI
 - Change `MISTRALAI_MODEL`, `MISTRALAI_API_KEY` and `OUTPUT_FILE_PATH` under `params.py`
 
+## Run Sensei
 - Run with `python main.py`
 
 # Optional
