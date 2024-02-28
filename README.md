@@ -1,5 +1,5 @@
 # Sensei (先生)
-A simple, powerful, minimal codebase to generate synthetic data using OpenAI
+A simple, powerful, minimal codebase to generate synthetic data using OpenAI or MistralAI
 
 ![alt text](Sensei.png)
 
