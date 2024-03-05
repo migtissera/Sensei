@@ -6,9 +6,13 @@ OPENAI_API_KEY = ""
 MISTRALAI_MODEL = "mistral-large-latest"
 MISTRALAI_API_KEY = ""
 
-## Choose Your Provider: mistral or openai
-PROVIDER = "mistral"
+## AnthropicAI Details
+ANTHROPICAI_MODEL = "claude-3-opus-20240229"
+ANTHROPICAI_API_KEY = ""
+
+## Choose Your Provider: openai, mistral or anthropic
+PROVIDER = "anthropic"
 
 ## Generation Details
 OUTPUT_FILE_PATH = "dataset.jsonl"
-NUM_WORKERS = 16
+NUM_WORKERS = 4
